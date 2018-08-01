@@ -14,6 +14,8 @@
 		CCCFD39821115EBD00A51949 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCCFD39621115EBD00A51949 /* LaunchScreen.storyboard */; };
 		CCCFD3A321115EBD00A51949 /* JNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCFD3A221115EBD00A51949 /* JNewsTests.swift */; };
 		CCCFD3AE21115EBD00A51949 /* JNewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCFD3AD21115EBD00A51949 /* JNewsUITests.swift */; };
+		CCFE7AA421120CC5007B8274 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFE7AA321120CC5007B8274 /* APIHandler.swift */; };
+		CCFE7AA621120F26007B8274 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFE7AA521120F26007B8274 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		CCCFD3A921115EBD00A51949 /* JNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCCFD3AD21115EBD00A51949 /* JNewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JNewsUITests.swift; sourceTree = "<group>"; };
 		CCCFD3AF21115EBD00A51949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCFE7AA321120CC5007B8274 /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
+		CCFE7AA521120F26007B8274 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +104,11 @@
 				CCCFD38D21115EBC00A51949 /* AppDelegate.swift */,
 				CCCFD38F21115EBC00A51949 /* ViewController.swift */,
 				CCCFD39121115EBC00A51949 /* Main.storyboard */,
+				CCFE7AA321120CC5007B8274 /* APIHandler.swift */,
 				CCCFD39421115EBD00A51949 /* Assets.xcassets */,
 				CCCFD39621115EBD00A51949 /* LaunchScreen.storyboard */,
 				CCCFD39921115EBD00A51949 /* Info.plist */,
+				CCFE7AA521120F26007B8274 /* SwiftyJSON.swift */,
 			);
 			path = JNews;
 			sourceTree = "<group>";
@@ -256,8 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCFE7AA421120CC5007B8274 /* APIHandler.swift in Sources */,
 				CCCFD39021115EBC00A51949 /* ViewController.swift in Sources */,
 				CCCFD38E21115EBC00A51949 /* AppDelegate.swift in Sources */,
+				CCFE7AA621120F26007B8274 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
