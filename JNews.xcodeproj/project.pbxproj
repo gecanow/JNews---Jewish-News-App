@@ -16,6 +16,8 @@
 		CCCFD3AE21115EBD00A51949 /* JNewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCFD3AD21115EBD00A51949 /* JNewsUITests.swift */; };
 		CCFE7AA421120CC5007B8274 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFE7AA321120CC5007B8274 /* APIHandler.swift */; };
 		CCFE7AA621120F26007B8274 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFE7AA521120F26007B8274 /* SwiftyJSON.swift */; };
+		CCFE7AA821121427007B8274 /* HeadlineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFE7AA721121427007B8274 /* HeadlineCell.swift */; };
+		CCFE7AAA211233B1007B8274 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFE7AA9211233B1007B8274 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		CCCFD3AF21115EBD00A51949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCFE7AA321120CC5007B8274 /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
 		CCFE7AA521120F26007B8274 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		CCFE7AA721121427007B8274 /* HeadlineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineCell.swift; sourceTree = "<group>"; };
+		CCFE7AA9211233B1007B8274 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 			children = (
 				CCCFD38D21115EBC00A51949 /* AppDelegate.swift */,
 				CCCFD38F21115EBC00A51949 /* ViewController.swift */,
+				CCFE7AA9211233B1007B8274 /* DetailViewController.swift */,
+				CCFE7AA721121427007B8274 /* HeadlineCell.swift */,
 				CCCFD39121115EBC00A51949 /* Main.storyboard */,
 				CCFE7AA321120CC5007B8274 /* APIHandler.swift */,
 				CCCFD39421115EBD00A51949 /* Assets.xcassets */,
@@ -264,6 +270,8 @@
 			files = (
 				CCFE7AA421120CC5007B8274 /* APIHandler.swift in Sources */,
 				CCCFD39021115EBC00A51949 /* ViewController.swift in Sources */,
+				CCFE7AA821121427007B8274 /* HeadlineCell.swift in Sources */,
+				CCFE7AAA211233B1007B8274 /* DetailViewController.swift in Sources */,
 				CCCFD38E21115EBC00A51949 /* AppDelegate.swift in Sources */,
 				CCFE7AA621120F26007B8274 /* SwiftyJSON.swift in Sources */,
 			);

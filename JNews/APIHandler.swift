@@ -13,36 +13,40 @@ class APIHandler: NSObject {
     func getAllArticles() -> [[String: String]] {
         var articleArr = [[String: String]]()
         
-        let query = "https://newsapi.org/v2/top-headlines?country=il&apiKey=\(apiKey)"
+        let query1 = "https://newsapi.org/v2/top-headlines?country=il&apiKey=\(apiKey)"
+        let query2 = "https://newsapi.org/v2/top-headlines?sources=the-jerusalem-post&apiKey=\(apiKey)"
         
-        DispatchQueue.global(qos: .userInitiated).async {
-            [unowned self] in
-            // rest of method goes here
-            
-            if let url = URL(string: query) {
-                if let data = try? Data(contentsOf: url) {
-                    let json = try! JSON(data: data)
-                    if json["status"] == "ok" {
-                        self.parse(json: json)
-                        return
-                    }
-                }
-            }
-            self.loadError(problem: "There was a problem loading the news feed.")
-        }
+        articleArr += pleaseQuery(query1, lang: "he")
+        articleArr += pleaseQuery(query2, lang: "en")
+        return articleArr
     }
-    
-    
     
     //--------------------//
     // QUERYING FUNCTIONS //
     //--------------------//
     
     //=========================================
+    // Takes in a URL and returns the results
+    // of the parse function
+    //=========================================
+    func pleaseQuery(_ query: String, lang: String) -> [[String: String]] {
+        if let url = URL(string: query) {
+            if let data = try? Data(contentsOf: url) {
+                let json = try! JSON(data: data)
+                if json["status"] == "ok" {
+                    return self.parse(json: json, lang: lang)
+                }
+            }
+        }
+        return [[String: String]]()
+    }
+    
+    //=========================================
     // Parses for all sources of a given type
     //=========================================
-    func parse(json: JSON) {
-        print(json["totalResults"])
+    func parse(json: JSON, lang: String) -> [[String: String]] {
+        var articles = [[String: String]]()
+        
         for result in json["articles"].arrayValue {
             let title = result["title"].stringValue
             let description = result["description"].stringValue
@@ -50,18 +54,11 @@ class APIHandler: NSObject {
             let date = String(result["publishedAt"].stringValue.prefix(10))
             let sourceName = result["source"]["name"].stringValue
             
-            let article = ["title": title, "description": description, "url": url, "sourceName": sourceName, "date": date, "timeToComplete": "", "isFinished": "false"]
+            let article = ["title": title, "description": description, "url": url, "sourceName": sourceName, "date": date, "lang": lang]
             articles.append(article)
         }
         
-        if articles.count > 0 {
-            DispatchQueue.main.async {
-                [unowned self] in
-                self.performSegue(withIdentifier: "gameSegue2", sender: self)
-            }
-        } else {
-            loadError(problem: "Not enough sources available.")
-        }
+        return articles
     }
     
     //=========================================
